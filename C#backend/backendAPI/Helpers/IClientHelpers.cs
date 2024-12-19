@@ -5,7 +5,7 @@ namespace backendAPI.Helpers
     public interface IClientHelpers
 {
     
-      Task<ClientDto> GetUser();
+      Task<ClientDto> GetUser(int? pageNumber);
 
 }
 }

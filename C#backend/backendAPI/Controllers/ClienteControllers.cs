@@ -15,9 +15,11 @@ namespace backendAPI.Controllers
             _helpers = helpers;
         }
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(
+        [FromQuery] int? pageNumber = 1
+        )
         {
-            var clients = _helpers.GetUser();
+            var clients = _helpers.GetUser(pageNumber);
             string jsonString = JsonSerializer.Serialize(clients);
             return Ok(jsonString);
         }
