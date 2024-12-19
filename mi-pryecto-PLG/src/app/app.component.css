@@ -1,0 +1,93 @@
+/* Estilos generales para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Asegura que las celdas estén pegadas */
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para las celdas y cabecera */
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd; /* Bordes ligeros */
+}
+
+th {
+    background-color: #4CAF50; /* Color de fondo del encabezado */
+    color: white; /* Color de texto del encabezado */
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fila alterna */
+}
+
+tr:hover {
+    background-color: #ddd; /* Color al pasar el cursor sobre las filas */
+}
+
+/* Estilo para el caption de la tabla */
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos para el cargador (spinner) */
+.spinner-border {
+    border-width: 4px;
+    border-top-color: transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-top: 4px solid #007bff; /* Color de la animación */
+    animation: spin 1s linear infinite;
+}
+
+/* Animación para el spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilo para el mensaje de alerta cuando no hay clientes */
+.alert-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la tabla en dispositivos pequeños */
+.overflow-x-auto {
+    overflow-x: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Responsividad para la tabla */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 10px 12px;
+    }
+
+    caption {
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,63 @@
+# Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# NPM packages
+node_modules/
+
+# User-specific files
+*.rsuser
+*.userprefs
+*.ide.workspace
+*.ide.workspace.*
+*.ide.misc
+
+# Azure DevOps
+_ide/workspace/
+
+# IIS
+*.iisexpress/
+iisexpress*.config
+
+# Resharper
+resharper.xml
+resharper.*
+
+# Rider
+.idea/
+
+# Docker
+**/[Cc]ompose/
+docker-compose.*
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Temp files
+*.tmp
+*.temp
+*.pid
+
+# OS Generated
+.DS_Store
+*.swp
+Thumbs.db
