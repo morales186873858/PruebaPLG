@@ -86,8 +86,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles/tailwind.css", 
+            "styles": [              
               "src/styles.css"
             ],
             "scripts": []
