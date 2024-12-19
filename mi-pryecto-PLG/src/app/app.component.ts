@@ -20,7 +20,8 @@ export class AppComponent implements OnInit {
     
     this.clientesService.obtenerClientes().subscribe({
       next: (data) => {
-        this.clientes = data;
+        console.log(data);
+        this.clientes = data.Result.Clients;
         this.cargando = false;
       },
       error: (err) => {
