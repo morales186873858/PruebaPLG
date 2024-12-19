@@ -8,7 +8,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMariaDbContext(dbconfig);
 
-
+builder.Services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(builder => {
+                builder.AllowAnyOrigin();
+                builder.AllowAnyMethod();
+                builder.AllowAnyHeader();
+            });
+        });
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -48,7 +55,7 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
-
+app.UseCors();
 app.MapControllers();
 
 
